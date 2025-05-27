@@ -2,8 +2,8 @@ from setuptools import setup, find_packages
 
 setup(
     name="streamlit-carbon-button",
-    version="1.0.1",
-    author="Your Name",
+    version="1.1.0",
+    author="Luke Herbert",
     author_email="your.email@example.com",
     description="Carbon Design System button component for Streamlit",
     long_description="A Streamlit component that implements IBM's Carbon Design System buttons with full SVG icon support. Perfect for creating beautiful, accessible buttons in your Streamlit apps.",
@@ -21,7 +21,7 @@ setup(
         "streamlit >= 0.63",
     ],
     package_data={
-        "carbon_button": [
+        "briquette": [
             "frontend/index.html",
             "frontend/asset-manifest.json",
             "frontend/static/css/*",

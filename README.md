@@ -36,7 +36,7 @@ pip install -e .
 
 ```python
 import streamlit as st
-from carbon_button import carbon_button, CarbonIcons
+from briquette import carbon_button, CarbonIcons
 
 # Simple button
 if carbon_button("Click me!", key="btn1"):
@@ -153,7 +153,7 @@ All icons are available through the `CarbonIcons` class:
 
 ```python
 import streamlit as st
-from carbon_button import carbon_button, CarbonIcons
+from briquette import carbon_button, CarbonIcons
 
 st.title("My Dashboard")
 
