@@ -66,6 +66,16 @@ def carbon_button(
     bool
         True if the button was clicked, False otherwise
     """
+    import streamlit as st
+    
+    # Generate a unique key if not provided
+    if key is None:
+        key = f"carbon_button_{id(label)}"
+    
+    # Store the previous click count in session state
+    prev_clicks_key = f"__carbon_button_prev_{key}"
+    if prev_clicks_key not in st.session_state:
+        st.session_state[prev_clicks_key] = 0
     
     # Call the React component
     component_value = _component_func(
@@ -76,11 +86,16 @@ def carbon_button(
         useContainerWidth=use_container_width,
         colors=colors,
         key=key,
-        default=0,  # Default click count
+        default=st.session_state[prev_clicks_key],  # Use previous value as default
     )
     
-    # Return True on any click (component returns click count)
-    return component_value > 0
+    # Check if there was a new click
+    clicked = False
+    if component_value is not None and component_value > st.session_state[prev_clicks_key]:
+        clicked = True
+        st.session_state[prev_clicks_key] = component_value
+    
+    return clicked
 
 # Also export the raw function name for backward compatibility
 carbon_button_raw = carbon_button
