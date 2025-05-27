@@ -4,6 +4,12 @@ This app demonstrates the Carbon Design System button component for Streamlit.
 """
 
 import streamlit as st
+import sys
+import os
+
+# Add the current directory to Python path so we can import briquette
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+
 from briquette import carbon_button, CarbonIcons
 
 st.set_page_config(
