@@ -85,6 +85,9 @@ def carbon_button(
 # Also export the raw function name for backward compatibility
 carbon_button_raw = carbon_button
 
+# Make the function available at package level
+__all__ = ['carbon_button', 'CarbonIcons']
+
 
 # Carbon icon definitions
 class CarbonIcons:
