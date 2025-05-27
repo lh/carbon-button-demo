@@ -13,13 +13,9 @@ import os
 # Check if we're in development mode
 _DEVELOP_MODE = os.getenv("STREAMLIT_CARBON_BUTTON_DEV_MODE", "").lower() == "true"
 
-# Debug print
-print(f"Carbon Button: Development mode = {_DEVELOP_MODE}")
-
 # Declare the component
 if _DEVELOP_MODE:
     # In development, connect to the React dev server
-    print("Carbon Button: Connecting to http://localhost:3000")
     _component_func = components.declare_component(
         "carbon_button",
         url="http://localhost:3000",  # Default React dev server port
@@ -28,7 +24,6 @@ else:
     # In production, use the built component
     parent_dir = os.path.dirname(os.path.abspath(__file__))
     build_dir = os.path.join(parent_dir, "frontend")
-    print(f"Carbon Button: Using build directory {build_dir}")
     _component_func = components.declare_component(
         "carbon_button", 
         path=build_dir
