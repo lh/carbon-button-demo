@@ -1,6 +1,6 @@
 # Streamlit Carbon Button Component
 
-Beautiful, accessible buttons for Streamlit apps using IBM's Carbon Design System.
+Carbon Design System buttons for Streamlit apps with automatic dark mode support.
 
 ![Python](https://img.shields.io/badge/python-3.7+-blue.svg)
 ![Streamlit](https://img.shields.io/badge/streamlit-1.29.0+-red.svg)
