@@ -1,0 +1,20 @@
+/* Global styles for Carbon Button Component */
+
+.carbon-icon svg {
+  width: 100%;
+  height: 100%;
+  fill: currentColor;
+  display: block;
+}
+
+/* Ensure button text doesn't wrap */
+button {
+  white-space: nowrap;
+}
+
+/* Remove default button styles */
+button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
