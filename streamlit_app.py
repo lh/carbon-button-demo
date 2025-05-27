@@ -4,7 +4,7 @@ This app demonstrates the Carbon Design System button component for Streamlit.
 """
 
 import streamlit as st
-from carbon_button import carbon_button, CarbonIcons
+from briquette import carbon_button, CarbonIcons
 
 st.set_page_config(
     page_title="Carbon Button Demo",
@@ -99,7 +99,7 @@ st.subheader("Example Code")
 
 with st.expander("Show code example"):
     st.code("""
-from carbon_button import carbon_button, CarbonIcons
+from briquette import carbon_button, CarbonIcons
 
 # Basic button
 if carbon_button("Click Me"):
